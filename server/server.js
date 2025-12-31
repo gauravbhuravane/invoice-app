@@ -28,14 +28,14 @@ app.get("/", (req, res) => {
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
-    console.log("✅ MongoDB connected successfully");
+    console.log("MongoDB connected successfully");
   })
   .catch((error) => {
-    console.error("❌ MongoDB connection error:", error);
+    console.error("MongoDB connection error:", error);
   });
 
 // Start Server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
